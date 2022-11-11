@@ -42,7 +42,6 @@ const Sidebar = ({ children }) => {
                 className="sidebar"
             >
                 <div className="top_section">
-                   
                     <div
                         style={{
                             marginLeft: isOpen ? "110px" : "0px",
