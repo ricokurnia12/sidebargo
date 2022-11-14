@@ -9,6 +9,7 @@ import { FaBars } from "react-icons/fa";
 import { GrDocumentText } from "react-icons/gr";
 import { NavLink } from "react-router-dom";
 import logo from "../Assets/logo.png";
+import go from "../Assets/go.bmp";
 
 const Sidebar = ({ children }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -36,7 +37,7 @@ const Sidebar = ({ children }) => {
         },
     ];
     return (
-        <div className="container">
+        <div className="sidebarmain">
             <div
                 style={{ width: isOpen ? "250px" : "50px" }}
                 className="sidebar"
@@ -44,7 +45,18 @@ const Sidebar = ({ children }) => {
                 <div className="top_section">
                     <div
                         style={{
-                            marginLeft: isOpen ? "110px" : "0px",
+                            display: !isOpen ? "none" : "",
+                        }}
+                        className="logosidebar"
+                    >
+                        <a className="navbar-brand1" href="#">
+                            <img src={go} width="" />
+                            
+                        </a>
+                    </div>
+                    <div
+                        style={{
+                            marginLeft: isOpen ? "200px" : "0px",
                         }}
                         className="bars"
                     >

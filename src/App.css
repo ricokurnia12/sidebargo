@@ -1,25 +1,62 @@
+/* root */
+
 * {
     margin: 0;
     padding: 0;
-    text-decoration: none;
+    text-decoration: none !important;
+    /* position: fixed; */
 }
 
 body {
     background-color: darkgray;
 }
-.container {
-    display: flex;
+
+/* end of root */
+
+/* Navbar navigation */
+
+.container-fluid {
+    margin-right: 50px;
 }
-main {
-    width: 100%;
-    padding: 20px;
+
+.navbar {
+    margin-left: -10px;
+    /* position: relative; */
+    /* z-index: 1000; */
+    height: 50px;
+    background-color: #cb243e;
+    box-shadow: 1px 10px 15px -6px rgba(0, 0, 0, 0.92);
+    -webkit-box-shadow: 1px 10px 15px -6px rgba(0, 0, 0, 0.92);
+    -moz-box-shadow: 1px 10px 15px -6px rgba(0, 0, 0, 0.92);
+}
+.dropdown-menu {
+    border: skyblue;
+    display: none;
+    margin-right: 20px;
+    /* position: relative; */
+    width: 10px;
+}
+
+/* end of navbar navigation */
+/* <-----------------------------> */
+/* SIDEBAR */
+
+.sidebarmain {
+    position: relative;
+    display: flex;
+    z-index: 999;
 }
 .sidebar {
+    text-decoration: none;
     background: #cb243e;
     color: #fff;
     height: 100vh;
     width: 500px;
     transition: all 0.5s;
+    z-index: 999;
+    position: relative;
+    /* overflow: hidden; */
+    /* z-index: 999; */
 }
 .top_section {
     display: flex;
@@ -30,11 +67,13 @@ main {
     font-size: 30px;
 }
 .bars {
+    margin-top: 30px;
     display: flex;
     font-size: 25px;
 
     margin-left: 100px;
     transition: 0.5s;
+    position: relative;
 }
 
 .link {
@@ -52,8 +91,54 @@ main {
 .active {
     background: white;
     color: black;
+    text-decoration: none;
 }
 .icon,
 .link_text {
     font-size: 20px;
+    text-decoration: none;
+}
+
+/* logo customize sidebar */
+
+.logosidebar {
+    transition: transform 1s;
+}
+.navbar-brand1 {
+    background-color: whitesmoke;
+    position: absolute;
+    height: 40px;
+    width: 50px;
+    margin-top: -10px;
+    margin-left: 1vw;
+    text-align: center;
+    border-radius: 5px;
+
+    box-shadow: rgba(0, 0, 0, 0.5) 1.95px 1.95px 2.6px;
+    /* z-index: 1; */
+    transition: all 3s;
+}
+
+.navbar-brand1 img {
+    width: 40px;
+}
+
+/* end of logo custimeze sidebae*/
+
+/* <------------------------------------------------> */
+/* Content & Main */
+
+main {
+    width: 96vw;
+    padding: 0px;
+    z-index: 999;
+    /* position: absolute; */
+    margin-left: 10px;
+    overflow-y: hidden;
+}
+
+.table {
+    /* position: relative; */
+    margin-top: 100px;
+    z-index: 999;
 }
