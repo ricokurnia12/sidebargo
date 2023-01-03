@@ -4,6 +4,8 @@ import {
     HiUser,
     HiDocumentText,
     HiX,
+    HiLogout
+   
 } from "react-icons/hi";
 import { FaBars } from "react-icons/fa";
 import { GrDocumentText } from "react-icons/gr";
@@ -17,30 +19,28 @@ const Sidebar = ({ children }) => {
     const menuItem = [
         {
             path: "/",
-            name: "List Peserta",
+            name: "Test Psikologi",
             icon: <HiUserAdd />,
         },
         {
             path: "/about",
-            name: "List Karyawan",
+            name: "GO Karir",
             icon: <HiUser />,
         },
         {
             path: "/analytics",
-            name: "Soal MBTI",
+            name: "Hapus Loker",
             icon: <HiDocumentText />,
         },
-        {
-            path: "/comment",
-            name: "Soal DISC",
-            icon: <HiDocumentText />,
-        },
+      
+
+    
     ];
     return (
         <div className="sidebarmain">
             <div
                 style={{ width: isOpen ? "250px" : "50px" }}
-                className="sidebar"
+                className="sidebar d-flex flex-column mb-3"
             >
                 <div className="top_section">
                     <div
@@ -51,7 +51,6 @@ const Sidebar = ({ children }) => {
                     >
                         <a className="navbar-brand1" href="#">
                             <img src={go} width="" />
-                            
                         </a>
                     </div>
                     <div
@@ -79,10 +78,27 @@ const Sidebar = ({ children }) => {
                         >
                             {item.name}
                         </div>
+                       
                     </NavLink>
                 ))}
+                <div className="d-flex flex-row ">
+                <div 
+                style={
+                    {
+                    marginTop: isOpen ? "230%" : "1200%",
+                    marginLeft: isOpen ? "20px" : "1200%",
+                    
+                 }}><HiLogout/></div>
+                 <div style={{
+                    marginTop: isOpen ? "230%" : "1200%",
+                    display: isOpen ? "block" : "none",
+                 }}><p>Logout</p></div>
+                 </div>
+              
             </div>
+            
             <main>{children}</main>
+            
         </div>
     );
 };
